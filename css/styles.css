@@ -141,6 +141,7 @@ img {
 
 .header-item {
   position: relative;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link {
   display: block;
@@ -270,8 +271,9 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-
+visibility: visible;
   background-color: rgba(0, 0, 0, 0.1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -288,6 +290,7 @@ img {
 
 .is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -310,12 +313,10 @@ img {
 .modal-btn-close:hover,
 .modal-btn-close:focus {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-close:focus {
   outline: 2px solid var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon-close {
@@ -517,7 +518,7 @@ img {
   background-color: var(--accent-color);
   cursor: pointer;
   outline: none;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .social-link {
@@ -528,6 +529,7 @@ img {
   color: var(--icon-color);
   border-radius: 50%;
   fill: currentColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients */
@@ -561,6 +563,7 @@ img {
   display: flex;
   width: 170px;
   height: 92px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--icon-color);
   border: 2px solid var(--icon-color);
   border-radius: 4px;
@@ -569,13 +572,12 @@ img {
 }
 .clients-item .link:hover {
   color: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
   border-color: var(--accent-color);
   cursor: pointer;
   outline: none;
 }
 .clients-item .link:focus {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
   outline: none;
@@ -583,10 +585,10 @@ img {
 
 .clients-item .icon:focus {
   fill: var(--accent-color);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item .icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: auto;
   fill: currentColor;
 }
